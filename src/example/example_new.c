@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:42:03 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 21:58:06 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 22:18:16 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * @param age The age of the example.
  * @return t_example* Pointer to the new example object, or NULL on failure.
  */
-t_example	*example_new(const char *name, const t_uint age)
+t_example	*example_new(const char *name, const t_u32 age)
 {
 	t_example	*new;
 

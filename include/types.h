@@ -6,27 +6,27 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 22:02:00 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 22:07:27 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 22:17:37 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TYPES_H
 # define TYPES_H
 
-typedef unsigned int		t_uint;
-typedef unsigned char		t_uchar;
-typedef unsigned short		t_ushort;
-typedef unsigned long		t_ulong;
-typedef unsigned long long	t_ullong;
+typedef unsigned char		t_u8;
+typedef unsigned int		t_u32;
+typedef unsigned short		t_u16;
+typedef unsigned long		t_u64;
+typedef unsigned long long	t_u128;
 
-typedef int					t_int;
-typedef char				t_char;
-typedef short				t_short;
-typedef long				t_long;
-typedef long long			t_llong;
+typedef char				t_i8;
+typedef int					t_i32;
+typedef short				t_i16;
+typedef long				t_i64;
+typedef long long			t_i128;
 
-typedef float				t_float;
-typedef double				t_double;
-typedef long double			t_ldouble;
+typedef float				t_f32;
+typedef double				t_f64;
+typedef long double			t_f128;
 
 #endif

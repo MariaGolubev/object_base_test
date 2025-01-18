@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:42:29 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 21:58:06 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 22:18:11 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @param age The age of the example.
  * @return int 0 on success, 1 on failure.
  */
-int	example_init(t_example *this, const char *name, const t_uint age)
+int	example_init(t_example *this, const char *name, const t_u32 age)
 {
 	this->name = strdup(name);
 	if (this->name == NULL)

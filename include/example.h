@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:42:57 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 22:08:31 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 22:17:54 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ typedef struct s_example
 	unsigned int	_age;
 }	t_example;
 
-int			example_init(t_example *this, const char *name, const t_uint age);
-t_example	*example_new(const char *name, const t_uint age);
+int			example_init(t_example *this, const char *name, const t_u32 age);
+t_example	*example_new(const char *name, const t_u32 age);
 void		example_destroy(t_example *this);
 void		example_delite(t_example *this);
-t_uint		example_get_age(t_example *this);
-void		example_set_age(t_example *this, const t_uint age);
+t_u32		example_get_age(t_example *this);
+void		example_set_age(t_example *this, const t_u32 age);
 
 #endif
