@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 22:49:59 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 22:58:52 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(void)
 		return (1);
 	example_2 = example_new("Alex", 22);
 	if (example_2 == NULL)
-		return (example_delite(&example_1), 1);
+		return (example_destroy(&example_1), 1);
 	printf("Example 1\n  name: %s\n  age: %u\n\n",
 		example_1.name, example_get_age(&example_1));
 	printf("Example 2\n  name: %s\n  age: %u\n",
