@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:42:57 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 22:17:54 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 22:35:53 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 
 # include "types.h"
 
+
 /**
- * struct s_example - Object Base struct
- * @name: Name of the example
- * @_age: Private age of the example
- *
- * Note: It is mandatory to call either example_destroy or example_delite
- * to properly free the allocated resources.
+ * @file example.h
+ * @brief Object base structure with a public field `name` and a private field `_age`.
+ * 
+ * Note: Ensure to properly destroy or delete the example object using
+ * `example_destroy` or `example_delite` to avoid memory leaks.
  */
 typedef struct s_example
 {
