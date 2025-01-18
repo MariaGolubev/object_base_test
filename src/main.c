@@ -6,12 +6,11 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/18 21:07:25 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/18 21:35:30 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "example.h"
+#include "test.h"
 
 int main(void)
 {

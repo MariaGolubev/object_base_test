@@ -1,5 +1,5 @@
 # Main variables
-NAME = example
+NAME = test
 
 CC = cc
 CFLAGS = -Wextra -Werror -Wall -Iinclude -MMD
