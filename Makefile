@@ -17,7 +17,7 @@ SRC_MAIN = main.c
 SRC_EXAMPLE = example/example_age.c example/example_delite.c \
 	example/example_destroy.c example/example_init.c \
 	example/example_new.c
-SRC_BTREEMAP = btreemap/btreemap_node_delone.c btreemap/btreemap_delite.c \
+SRC_BTREEMAP = btreemap/btreemap_node_delone.c btreemap/btreemap_delete.c \
 	btreemap/btreemap_get.c btreemap/btreemap_len.c \
 	btreemap/btreemap_node_clean.c btreemap/btreemap_node_new.c \
 	btreemap/btreemap_del.c btreemap/btreemap_destroy.c \

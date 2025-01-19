@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:48:16 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 13:53:48 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 14:02:47 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	hashmap_destroy(t_hashmap *this, void (*del)(void *))
 	{
 		if (this->array[i])
 		{
-			btreemap_delite(this->array[i], del);
+			btreemap_delete(this->array[i], del);
 			this->array[i] = NULL;
 		}
 		i++;
