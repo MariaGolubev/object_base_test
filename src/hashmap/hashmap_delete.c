@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   hashmap_node_delone.c                              :+:    :+:            */
+/*   hashmap_delete.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/01/19 11:45:22 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 13:03:21 by maria         ########   odam.nl         */
+/*   Created: 2025/01/19 11:48:26 by maria         #+#    #+#                 */
+/*   Updated: 2025/01/19 13:55:27 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hashmap.h"
 
-void	hashmap_node_delone(t_hasmap_node *this, void (*del)(void *))
+void	hashmap_delete(t_hashmap *this, void (*del)(void *))
 {
-	if (del)
-	{
-		del(this->value);
-		this->value = NULL;
-	}
+	hashmap_destroy(this, del);
 	free(this);
 }

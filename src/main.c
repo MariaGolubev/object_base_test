@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 13:11:58 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:58:31 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,16 +62,16 @@ void	test_hashmap(void)
 	hashmap_set(hashmap, "key3", "John");
 	if (hashmap_set(hashmap, "key1", "Maria") == 1)
 		printf("key1 already exists\n");
-	hashmap_del(hashmap, "key1");
+	hashmap_del(hashmap, "key1", NULL);
 	hashmap_setraw(hashmap, ft_hashstr("key1"), "Maria");
 	printf("key1: %s\n", (char *)hashmap_get(hashmap, "key1"));
 	printf("key2: %s\n", (char *)hashmap_get(hashmap, "key2"));
 	printf("key3: %s\n", (char *)hashmap_get(hashmap, "key3"));
-	hashmap_del(hashmap, "key1");
-	hashmap_del(hashmap, "NOTHING");
+	hashmap_del(hashmap, "key1", NULL);
+	hashmap_del(hashmap, "NOTHING", NULL);
 	printf("key1: %s\n", (char *)hashmap_get(hashmap, "key1"));
 	printf("Hashmap length: %lu\n", hashmap_len(hashmap));
-	hashmap_delite(hashmap, NULL);
+	hashmap_delete(hashmap, NULL);
 	printf("-------------------------------------------------------------\n");
 
 }
@@ -115,13 +115,13 @@ int	main(void)
 	if (hashmap == NULL)
 		return (1);
 	i = 0;
-	while (i < 100000)
+	while (i < 10000)
 	{
 		key = ft_itoa(i++);
 		if (hashmap_set(hashmap, key, key))
 			printf("Failed to set key: %s\n", key);
 	}
 	printf("Hashmap length: %lu\n", hashmap_len(hashmap));
-	hashmap_delite(hashmap, free);
+	hashmap_delete(hashmap, free);
 	return (0);
 }

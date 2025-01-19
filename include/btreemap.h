@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 10:05:57 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 11:04:05 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 14:00:30 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void			btreemap_delite(t_btreemap *this, void (*del)(void *));
 size_t			btreemap_len(t_btreemap *this);
 void			*btreemap_get(t_btreemap *this, t_u64 key);
 int				btreemap_set(t_btreemap *this, t_u64 key, void *value);
-int				btreemap_del(t_btreemap *this, t_u64 key);
+int				btreemap_del(t_btreemap *this, t_u64 key, void (*del)(void *));
 
 #endif

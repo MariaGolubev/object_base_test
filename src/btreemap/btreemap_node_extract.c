@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 10:44:43 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:37:13 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:57:11 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_btmap_node	*btreemap_node_extract(t_btmap_node **node, t_u64 key)
 	if (*node == NULL)
 		return (NULL);
 	if (key == (*node)->key)
-		extract(node, key);
+		return (extract(node, key));
 	if (key < (*node)->key)
 		return (btreemap_node_extract(&(*node)->left, key));
 	return (btreemap_node_extract(&(*node)->right, key));

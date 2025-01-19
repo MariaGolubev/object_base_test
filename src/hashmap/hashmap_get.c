@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:48:08 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:35:45 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:54:01 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 void	*hashmap_getraw(t_hashmap *this, t_u64 key)
 {
-	t_hasmap_node	*node;
+	t_btreemap	*node;
 
 	if (!this)
 		return (NULL);
-	node = this->array[key % this->buccet_count];
-	while (node)
-	{
-		if (node->key == key)
-			return (node->value);
-		node = node->next;
-	}
+	node = this->array[key % this->bucket_count];
+	if (node)
+		return (btreemap_get(node, key));
 	return (NULL);
 }
 

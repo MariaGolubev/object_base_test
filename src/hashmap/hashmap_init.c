@@ -6,19 +6,19 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:40:53 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:36:46 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:54:18 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hashmap.h"
 
-int	hashmap_init(t_hashmap *this, size_t buccet_count)
+int	hashmap_init(t_hashmap *this, size_t bucket_count)
 {
 	this->array
-		= (t_hasmap_node **)ft_calloc(buccet_count, sizeof(t_hasmap_node *));
+		= (t_btreemap **)ft_calloc(bucket_count, sizeof(t_btreemap *));
 	if (!this->array)
 		return (1);
-	this->buccet_count = buccet_count;
+	this->bucket_count = bucket_count;
 	this->len = 0;
 	return (0);
 }
