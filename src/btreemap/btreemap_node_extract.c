@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 10:44:43 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 10:54:48 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:37:13 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ static t_btmap_node	*extract(t_btmap_node **node, t_u64 key)
 	*node = NULL;
 	return (tmp);
 }
-
 
 t_btmap_node	*btreemap_node_extract(t_btmap_node **node, t_u64 key)
 {

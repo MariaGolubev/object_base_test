@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:03:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:25:44 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:35:17 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void			*hashmap_getraw(t_hashmap *this, t_u64 key);
 int				hashmap_set(t_hashmap *this, t_key key, void *value);
 int				hashmap_setraw(t_hashmap *this, t_u64 key, void *value);
 int				hashmap_del(t_hashmap *this, t_key key);
-int 			hashmap_delraw(t_hashmap *this, t_u64 key);
+int				hashmap_delraw(t_hashmap *this, t_u64 key);
 
 #endif

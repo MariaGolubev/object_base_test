@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:45:29 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 11:45:33 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:37:04 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_hasmap_node	*hashmap_node_new(t_u64 key, void *value)
 {
-	t_hasmap_node *node;
+	t_hasmap_node	*node;
 
 	node = (t_hasmap_node *)malloc(sizeof(t_hasmap_node));
 	if (!node)

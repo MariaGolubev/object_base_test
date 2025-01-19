@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:48:08 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:27:08 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:35:45 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*hashmap_getraw(t_hashmap *this, t_u64 key)
 {
-	t_hasmap_node *node;
+	t_hasmap_node	*node;
 
 	if (!this)
 		return (NULL);

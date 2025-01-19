@@ -6,13 +6,14 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:51:05 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:27:50 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:35:34 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hashmap.h"
 
-int	hashmap_delraw(t_hashmap *this, t_u64 key) {
+int	hashmap_delraw(t_hashmap *this, t_u64 key)
+{
 	t_hasmap_node	*node;
 	t_hasmap_node	*prev;
 

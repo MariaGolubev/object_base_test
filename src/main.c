@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:23:35 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:40:49 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,28 @@
 #include "btreemap.h"
 #include "hashmap.h"
 
-int	main(void)
+void	test_example(void)
 {
 	t_example	example_1;
 	t_example	*example_2;
-	t_btreemap	btreemap;
-	t_hashmap	hashmap;
 
 	if (example_init(&example_1, "Maria", 30))
-		return (1);
+		return ;
 	example_2 = example_new("Alex", 22);
 	if (example_2 == NULL)
-		return (example_destroy(&example_1), 1);
+		return (example_destroy(&example_1), (void)1);
 	printf("Example 1\n  name: %s\n  age: %u\n\n",
 		example_1.name, example_get_age(&example_1));
 	printf("Example 2\n  name: %s\n  age: %u\n",
 		example_2->name, example_get_age(example_2));
 	example_destroy(&example_1);
 	example_delite(example_2);
-	printf("-------------------------------------------------------------\n");
+}
+
+void	test_btreemap(void)
+{
+	t_btreemap	btreemap;
+
 	btreemap_init(&btreemap);
 	btreemap_set(&btreemap, ft_hashstr("key1"), "Maria");
 	btreemap_set(&btreemap, ft_hashstr("key2"), "Alex");
@@ -41,13 +44,12 @@ int	main(void)
 	printf("key1: %s\n", (char *)btreemap_get(&btreemap, ft_hashstr("key1")));
 	printf("key2: %s\n", (char *)btreemap_get(&btreemap, ft_hashstr("key2")));
 	btreemap_destroy(&btreemap, NULL);
-	printf("-------------------------------------------------------------\n");
-	printf("Hash for 'Hello world': %lu %lu\n", ft_hashstr("Hello world"), ft_hashstr("Hello world") % 4);
-	printf("Hash for 'Hello world!': %lu %lu\n", ft_hashstr("Hello world!"), ft_hashstr("Hello world1") % 4);
-	printf("Hash for 'BlaBla!!': %lu %lu\n", ft_hashstr("BlaBla!!"), ft_hashstr("BlaBla!!") % 4);
-	printf("Hash for 'BlaBla!': %lu %lu\n", ft_hashstr("BlaBla!"), ft_hashstr("BlaBla!") % 4);
-	printf("Hash for 'BlaBla': %lu %lu\n", ft_hashstr("BlaBla"), ft_hashstr("BlaBla") % 4);
-	printf("-------------------------------------------------------------\n");
+}
+
+void	test_hashmap(void)
+{
+	t_hashmap	hashmap;
+
 	hashmap_init(&hashmap, 100);
 	hashmap_set(&hashmap, "key1", "Maria");
 	hashmap_set(&hashmap, "key2", "Alex");
@@ -64,5 +66,38 @@ int	main(void)
 	printf("key1: %s\n", (char *)hashmap_get(&hashmap, "key1"));
 	printf("Hashmap length: %lu\n", hashmap_len(&hashmap));
 	hashmap_destroy(&hashmap, NULL);
+}
+
+void	test_hash_functions(void)
+{
+	t_u64		hash;
+	const char	*map[7];
+	int			i;
+
+	i = 0;
+	map[0] = "Hello world";
+	map[1] = "Hello world!";
+	map[2] = "BlaBla!!";
+	map[3] = "BlaBla!";
+	map[4] = "Cow";
+	map[5] = "BlaBla";
+	map[6] = NULL;
+	while (map[i])
+	{
+		hash = ft_hashstr(map[i]);
+		printf("Hash of \"%s\": %lu\n", map[i], hash);
+		i++;
+	}
+}
+
+int	main(void)
+{
+	test_example();
+	printf("-------------------------------------------------------------\n");
+	test_btreemap();
+	printf("-------------------------------------------------------------\n");
+	test_hash_functions();
+	printf("-------------------------------------------------------------\n");
+	test_hashmap();
 	return (0);
 }
