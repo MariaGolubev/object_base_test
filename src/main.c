@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 13:08:59 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:11:58 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	test_example(void)
 		example_2->name, example_get_age(example_2));
 	example_destroy(&example_1);
 	example_delite(example_2);
+	printf("-------------------------------------------------------------\n");
+
 }
 
 void	test_btreemap(void)
@@ -44,6 +46,8 @@ void	test_btreemap(void)
 	printf("key1: %s\n", (char *)btreemap_get(&btreemap, ft_hashstr("key1")));
 	printf("key2: %s\n", (char *)btreemap_get(&btreemap, ft_hashstr("key2")));
 	btreemap_destroy(&btreemap, NULL);
+	printf("-------------------------------------------------------------\n");
+
 }
 
 void	test_hashmap(void)
@@ -68,6 +72,8 @@ void	test_hashmap(void)
 	printf("key1: %s\n", (char *)hashmap_get(hashmap, "key1"));
 	printf("Hashmap length: %lu\n", hashmap_len(hashmap));
 	hashmap_delite(hashmap, NULL);
+	printf("-------------------------------------------------------------\n");
+
 }
 
 void	test_hash_functions(void)
@@ -92,6 +98,7 @@ void	test_hash_functions(void)
 		printf("Hash of \"%s\": %lu\n", map[i], hash);
 		i++;
 	}
+	printf("-------------------------------------------------------------\n");
 }
 
 int	main(void)
@@ -101,13 +108,9 @@ int	main(void)
 	char		*key;
 	
 	test_example();
-	printf("-------------------------------------------------------------\n");
 	test_btreemap();
-	printf("-------------------------------------------------------------\n");
 	test_hash_functions();
-	printf("-------------------------------------------------------------\n");
 	test_hashmap();
-
 	hashmap = hashmap_new(1000);
 	if (hashmap == NULL)
 		return (1);
