@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:03:38 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 12:23:35 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	main(void)
 	hashmap_set(&hashmap, "key3", "John");
 	if (hashmap_set(&hashmap, "key1", "Maria") == 1)
 		printf("key1 already exists\n");
+	hashmap_del(&hashmap, "key1");
+	hashmap_setraw(&hashmap, ft_hashstr("key1"), "Maria");
 	printf("key1: %s\n", (char *)hashmap_get(&hashmap, "key1"));
 	printf("key2: %s\n", (char *)hashmap_get(&hashmap, "key2"));
 	printf("key3: %s\n", (char *)hashmap_get(&hashmap, "key3"));
