@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 13:58:31 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 14:37:33 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void	test_btreemap(void)
 	btreemap_init(&btreemap);
 	btreemap_set(&btreemap, ft_hashstr("key1"), "Maria");
 	btreemap_set(&btreemap, ft_hashstr("key2"), "Alex");
-	btreemap_set(&btreemap, ft_hashstr("key3"), "John");
+	btreemap_del(&btreemap, ft_hashstr("key1"), NULL);
+	btreemap_set(&btreemap, ft_hashstr("key1"), "John");
 	printf("key1: %s\n", (char *)btreemap_get(&btreemap, ft_hashstr("key1")));
 	printf("key2: %s\n", (char *)btreemap_get(&btreemap, ft_hashstr("key2")));
 	btreemap_destroy(&btreemap, NULL);
@@ -115,12 +116,13 @@ int	main(void)
 	if (hashmap == NULL)
 		return (1);
 	i = 0;
-	while (i < 10000)
+	while (i < 1000)
 	{
 		key = ft_itoa(i++);
 		if (hashmap_set(hashmap, key, key))
 			printf("Failed to set key: %s\n", key);
 	}
+	i = 0;
 	printf("Hashmap length: %lu\n", hashmap_len(hashmap));
 	hashmap_delete(hashmap, free);
 	return (0);

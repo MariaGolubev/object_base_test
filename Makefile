@@ -14,15 +14,18 @@ LIBFT = $(LIBFTDIR)/libft.a
 
 # Explicitly listed source files
 SRC_MAIN = main.c
+
 SRC_EXAMPLE = example/example_age.c example/example_delite.c \
 	example/example_destroy.c example/example_init.c \
 	example/example_new.c
+
 SRC_BTREEMAP = btreemap/btreemap_node_delone.c btreemap/btreemap_delete.c \
 	btreemap/btreemap_get.c btreemap/btreemap_len.c \
 	btreemap/btreemap_node_clean.c btreemap/btreemap_node_new.c \
 	btreemap/btreemap_del.c btreemap/btreemap_destroy.c \
 	btreemap/btreemap_init.c btreemap/btreemap_new.c \
 	btreemap/btreemap_node_extract.c btreemap/btreemap_set.c
+
 SRC_HASHMAP = hashmap/hashmap_del.c hashmap/hashmap_destroy.c \
 	hashmap/hashmap_get.c hashmap/hashmap_init.c \
 	hashmap/hashmap_len.c hashmap/hashmap_new.c \

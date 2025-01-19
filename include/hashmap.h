@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:03:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 13:51:52 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 14:32:42 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef const char*	t_key;
 
 typedef struct s_hashmap
 {
-	t_btreemap		**array;
+	t_btreemap		*array;
 	size_t			bucket_count;
 	size_t			len;
 }	t_hashmap;
