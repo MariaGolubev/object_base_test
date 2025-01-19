@@ -28,7 +28,7 @@ SRC_HASHMAP = hashmap/hashmap_del.c hashmap/hashmap_destroy.c \
 	hashmap/hashmap_len.c hashmap/hashmap_new.c \
 	hashmap/hashmap_set.c hashmap/hashmap_node_delone.c \
 	hashmap/hashmap_node_clean.c hashmap/hashmap_node_extract.c \
-	hashmap/hashmap_node_new.c
+	hashmap/hashmap_node_new.c hashmap_delite.c
 
 # Combine all source files into one variable
 SRC = $(addprefix $(SRCDIR)/, $(SRC_MAIN) $(SRC_EXAMPLE) $(SRC_BTREEMAP) $(SRC_HASHMAP))
