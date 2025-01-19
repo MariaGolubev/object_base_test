@@ -6,7 +6,7 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/18 20:11:38 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:42:18 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:08:59 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	test_hashmap(void)
 void	test_hash_functions(void)
 {
 	t_u64		hash;
-	const char	*map[7];
+	const char	*map[9];
 	int			i;
 
 	i = 0;
@@ -83,7 +83,9 @@ void	test_hash_functions(void)
 	map[3] = "BlaBla!";
 	map[4] = "Cow";
 	map[5] = "BlaBla";
-	map[6] = NULL;
+	map[6] = "1";
+	map[7] = "2";
+	map[8] = NULL;
 	while (map[i])
 	{
 		hash = ft_hashstr(map[i]);
@@ -94,6 +96,10 @@ void	test_hash_functions(void)
 
 int	main(void)
 {
+	t_hashmap	*hashmap;
+	int			i;
+	char		*key;
+	
 	test_example();
 	printf("-------------------------------------------------------------\n");
 	test_btreemap();
@@ -101,5 +107,18 @@ int	main(void)
 	test_hash_functions();
 	printf("-------------------------------------------------------------\n");
 	test_hashmap();
+
+	hashmap = hashmap_new(1000);
+	if (hashmap == NULL)
+		return (1);
+	i = 0;
+	while (i < 100000)
+	{
+		key = ft_itoa(i++);
+		if (hashmap_set(hashmap, key, key))
+			printf("Failed to set key: %s\n", key);
+	}
+	printf("Hashmap length: %lu\n", hashmap_len(hashmap));
+	hashmap_delite(hashmap, free);
 	return (0);
 }

@@ -2,7 +2,7 @@
 NAME = test
 
 CC = cc
-CFLAGS = -Wextra -Werror -Wall -Iinclude -MMD -g3
+CFLAGS = -Wextra -Werror -Wall -Iinclude -MMD -O3
 LDFLAGS = $(LIBFT)
 
 # Directories

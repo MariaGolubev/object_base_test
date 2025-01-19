@@ -6,11 +6,12 @@
 /*   By: maria <maria@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/01/19 11:48:47 by maria         #+#    #+#                 */
-/*   Updated: 2025/01/19 12:27:29 by maria         ########   odam.nl         */
+/*   Updated: 2025/01/19 13:03:32 by maria         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hashmap.h"
+#include "stdio.h"
 
 int	hashmap_setraw(t_hashmap *this, t_u64 key, void *value)
 {
